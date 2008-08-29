@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>microajax test</title>
+	<meta name="author" content="Stefan Lange-Hegermann">
+</head>
+<body>
+	<h1>testing microajax</h1>
+	<p>
+		microajax is a very small AJAX library (actually it's just a function) and does nothing, but request an URL from a server.
+	</p>
+	
+	<table>
+	<tr><th>Function</th><th>result</th></tr>
+	<tr><td>get</td><td><span id="test_area1">RUNNING</span></td></tr>
+	</table>
+	
+	<script type="text/javascript">
+		<!--
+		function $(e) {
+			return (typeof e==="string" ? document.getElementById(e) : e);
+		}
+		
+		window.addEventListener('load', function() {
+			microAjax('test.txt', function(result) {
+				$('test_area1').innerHTML=(result.substr(0,3)=="ABC" ? 'PASS' : 'FAIL');
+			});
+		}, false);
+		// -->
+	</script>
+	<script type="text/javascript" src="microajax.js"></script>
+</body>
+</html>
+
